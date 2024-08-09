@@ -1,0 +1,36 @@
+<div class="bootstrap-wrapper">
+    <div class="container">
+        <div class="raw">
+            <div class="col-md-6 offset-md-3 text-center">
+                <h2>Login Form</h2>
+                <form (ngSubmit)="onSubmit()" >                
+                   <div class="contain">
+                    <mat-form-field>
+                        <label for="uname"><b>Username</b></label>
+                        <input
+                        [(ngModel)]="credentials.email"
+                        type="text"  name="username" required matInput>
+                    </mat-form-field>
+                     <mat-form-field>                
+                        <label for="psw"><b>Password</b></label>
+                        <input 
+                        [(ngModel)]="credentials.password"
+                        type="password"  name="password" required matInput>
+                    </mat-form-field>
+                        <button type="submit">Login</button>
+                        <label>
+                            <input                             
+                            type="checkbox" checked="checked" name="remember"> Remember me
+                        </label>
+                    </div>
+                
+                    
+                </form>
+                <p class="mt">{{credentials | json}}</p>
+                
+                
+            </div>
+
+        </div>
+    </div>
+</div>
